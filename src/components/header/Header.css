@@ -1,0 +1,87 @@
+.page-header {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 0;
+    font: normal 2.1875rem 'SW';
+    text-align: center;
+    color: #fff;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    color: #fff;
+    transition: .3s ease;
+}
+
+.logo a:hover {
+    color: rgb(12, 12, 12);
+    text-shadow: 1px 1px 0 #f6ec31, -1px -1px 0 #f6ec31, -1px 1px #f6ec31, 1px -1px 0 #f6ec31;
+}
+
+.top-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.top-menu ul li {
+    display: inline-block;
+    padding: 15px;
+    text-transform: uppercase;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.top-menu ul li a {
+    text-decoration: none;
+    color: #505050;
+    font-size: 1rem;
+}
+
+.top-menu ul li:hover,
+.top-menu ul li:hover>a {
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+.top-menu ul .li-active,
+.top-menu ul .li-active>a {
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+.page-header {
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 400px) {
+    .page-header {
+        justify-content: space-around;
+    }
+    .logo h1 {
+        font: normal 1.5rem 'SW';
+    }
+    .top-menu ul li {
+        padding: 5px;
+    }
+    .top-menu ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .page-header {
+        justify-content: space-around;
+    }
+    .top-menu ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {}

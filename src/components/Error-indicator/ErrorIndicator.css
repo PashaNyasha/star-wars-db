@@ -1,0 +1,23 @@
+.error-indicator span {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+.error-indicator .boom {
+    font-size: 125px;
+    color: #fff;
+}
+
+.error-indicator span:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+.boom-img {
+    width: 500px;
+    margin: auto;
+}
+
+.boom-img img {
+    width: 100%;
+}

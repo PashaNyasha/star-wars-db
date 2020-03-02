@@ -1,0 +1,135 @@
+.item {
+    flex-basis: 50%;
+    height: inherit;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.item-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    transition: .3s ease;
+}
+
+.item .item-loading {
+    backdrop-filter: blur(3px);
+    filter: blur(3px);
+}
+
+.item .loadingio-spinner-double-ring-tqydyr6bjd {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.item-name {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.item-image {
+    width: 35%;
+    border-radius: 10px;
+    border: 2px solid #505050;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.item-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-data {
+    width: 50%;
+    max-height: 18rem;
+    overflow-y: auto;
+}
+
+.item-data::-webkit-scrollbar {
+    background: rgb(32, 32, 32);
+    border-radius: 10px;
+    width: 5px;
+    scroll-behavior: smooth;
+}
+
+.item-data::-webkit-scrollbar-thumb {
+    background: #505050;
+    border-radius: 10px;
+    width: 5px;
+}
+
+.item-data dl {
+    margin: 0;
+    display: block;
+}
+
+.item-data dt {
+    text-indent: 5px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.item-data dd {
+    text-align: right;
+    border-bottom: 1px solid;
+    margin: 0;
+    padding: 0 5px 5px 0;
+}
+
+.item-data dl:last-child dd {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 700px) {
+    .item {
+        position: absolute;
+        transition: 1.5s ease;
+        backface-visibility: hidden;
+    }
+    .item .item-loading {
+        backdrop-filter: none;
+        filter: none;
+    }
+    .item .loadingio-spinner-double-ring-tqydyr6bjd {
+        display: none;
+    }
+    .item-details {
+        justify-content: space-around;
+        height: 100%;
+    }
+    .item-image {
+        width: 35%;
+    }
+    .item-data {
+        width: 50%;
+        max-height: none;
+        height: inherit;
+        overflow-y: auto;
+    }
+    .item-data dt {
+        text-indent: 0;
+    }
+    .item-data dd {
+        padding: 0 2px 2px 0;
+    }
+    .rotate-details {
+        transform: rotateY(180deg);
+    }
+    .rotate-details .item-data {
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,55 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: rgb(12, 12, 12);
+    font-size: 100%;
+}
+
+@font-face {
+    src: url('./fonts/star-wars/SfDistantGalaxy-0l3d.ttf');
+    font-family: 'SW';
+}
+
+@font-face {
+    src: url('./fonts/icofont/fonts/icofont.ttf');
+    font-family: 'ICO';
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-main {
+    margin: 20px 0 0 0;
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 90%;
+    }
+    .container {
+        width: 100%;
+    }
+    .page-main {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    html {
+        font-size: 80%;
+    }
+    .container {
+        width: 100%;
+    }
+    .page-main {
+        margin: 0;
+    }
+}

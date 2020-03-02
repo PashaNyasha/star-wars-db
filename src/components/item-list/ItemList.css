@@ -1,0 +1,109 @@
+.choose-item {
+    flex-basis: 50%;
+    height: inherit;
+}
+
+.item-list {
+    height: inherit;
+}
+
+.item-list nav {
+    position: relative;
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto;
+    height: inherit;
+}
+
+.item-list nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 21rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: .3s ease;
+}
+
+.item-list nav .list-loading {
+    filter: blur(3px);
+}
+
+.choose-item .loadingio-spinner-double-ring-tqydyr6bjd {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.item-list nav ul::-webkit-scrollbar {
+    background: rgb(32, 32, 32);
+    border-radius: 10px;
+    width: 5px;
+    scroll-behavior: smooth;
+}
+
+.item-list nav ul::-webkit-scrollbar-thumb {
+    background: #505050;
+    border-radius: 10px;
+    width: 5px;
+}
+
+.item-list nav ul li {
+    font-size: 1rem;
+    transition: .3s ease;
+    border-bottom: 1px solid #505050;
+}
+
+.item-list nav ul li:last-child {
+    border-bottom: none;
+}
+
+.item-list nav ul li a {
+    text-decoration: none;
+    color: #505050;
+    transition: .3s ease;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-list nav ul li a:hover,
+.item-list ul li .active-item-list {
+    color: #fff;
+    border-color: #fff;
+    transform: scale(1.1);
+}
+
+.show-item .rotate-list {
+    transform: rotateY(360deg);
+}
+
+.rotate-list .item-list nav ul {
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 700px) {
+    .choose-item {
+        position: absolute;
+        width: 100%;
+        transition: 1.5s ease;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        overflow: hidden;
+    }
+    .item-list nav {
+        width: inherit;
+    }
+    .item-list nav .list-loading {
+        filter: blur(3px);
+    }
+    .choose-item .loadingio-spinner-double-ring-tqydyr6bjd {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+}

@@ -1,0 +1,64 @@
+.show-item {
+    margin: 30px auto;
+    width: 74%;
+    height: 350px;
+    color: #505050;
+    padding: 25px;
+}
+
+.items-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.rotate-block {
+    display: none;
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border: none;
+    background: none;
+    outline: none;
+    font: normal 2rem 'ICO';
+    color: transparent;
+    position: relative;
+}
+
+.rotate-block::before {
+    content: '\edff';
+    position: absolute;
+    color: #fff;
+}
+
+.rotate-block:disabled::before {
+    content: '\ec41';
+    color: red;
+}
+
+@keyframes rotateButton {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .show-item {
+        width: 100%;
+        color: #505050;
+        padding: 0;
+        position: relative;
+        perspective: 500px;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .items-wrapper {
+        display: block;
+    }
+    .show-item:first-child {
+        background: red;
+    }
+    .rotate-block {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {}
