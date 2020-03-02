@@ -64,7 +64,7 @@ const withData = View => {
       }
     };
 
-    componentDidUpdate(prevProps) {
+    componentWillUpdate(prevProps) {
       if (this.props.mobile && this.mobButtonActive) {
         if(prevProps.load !== this.props.load) {
           this.change(this.props.load);
